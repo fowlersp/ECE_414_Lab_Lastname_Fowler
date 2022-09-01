@@ -22,8 +22,8 @@ void main()
  /* Simple counter. */
  count = 0;
  while (1) {
- // output bottom 3 bits shifted to show progress
- LATA = (count >> SHAMT) & 0x7;
+ // output bottom 4 bits shifted to show progress
+ LATA = (count >> SHAMT) & 0xF;
  count++;
  }
 }
