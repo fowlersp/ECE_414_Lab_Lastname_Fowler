@@ -11,7 +11,7 @@
 #include <inttypes.h>
 
 extern void porta_in_init();
-extern void porta_in_read();
+extern uint8_t porta_in_read();
 
 #endif
 

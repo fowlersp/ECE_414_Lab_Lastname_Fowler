@@ -7,14 +7,20 @@
 #include "porta_in.h"
 #include "portb_out.h"
 
-main(){
-    uint8_t in;
+int main(){
+    const uint8_t const_one = 0x0001;
+    uint8_t in, bot_bits;
     uint16_t out;
     porta_in_init();
     portb_out_init();
     while(1){
         in = porta_in_read();
-        
+        bot_bits = (in & 0x0F);
+        if((in & 0x0010) == 0x0010){
+            out = ~(const_one << bot_bits);
+        }else{
+            out = (const_one << bot_bits);
+        }
         portb_out_write(out);
     }
 }
