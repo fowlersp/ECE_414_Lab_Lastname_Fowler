@@ -29,7 +29,7 @@ void Tick_PONGStates(unsigned char sw1, unsigned char sw2){
     switch(PONG_States){
         case PONG_START:
             lr = rand() % 2;
-            PONG_States = PONG_SERVE;
+            PONG_States = PONG_SERVE; //maybe move this to after the if else statements
             if(lr){
                 portb_out_write(LED_CONST << 7);
             }else{
@@ -76,7 +76,7 @@ void Tick_PONGStates(unsigned char sw1, unsigned char sw2){
                 PONG_States == PONG_LOSER;
                 cnt = 0;
             }
-            portb_out_write(LED_CONST >> cnt);
+            portb_out_write(LED_CONST >> cnt); //Note this should be portb_out_write(LED_CONST << cnt) still
             cnt--;
             break;
         case PONG_LOSEL:
