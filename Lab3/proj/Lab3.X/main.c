@@ -65,7 +65,7 @@ void Tick_PONGStates(unsigned char sw1, unsigned char sw2){
                 PONG_States == PONG_LOSER;
                 cnt = 0;
             }
-            portb_out_write(LED_CONST >> cnt);
+            portb_out_write(LED_CONST << cnt);
             cnt--;
             break;
         case PONG_LOSEL:
@@ -181,6 +181,30 @@ void Tick_DEBOUNCER(unsigned char r_btn){
 void main(){
     porta_in_init();
     portb_out_init();
+    char l_btn, r_btn, in;
+    zTimerSet(200);
+    zTimerOn();
+    
+    while(1){
+    //call states
+        in = porta_in_read();
+        l_btn = in & 0x01;
+        r_btn = in & 0x02;
+        r_btn =  r_btn >> 1;
+        if(zTimerReadFlag()){
+            Tick_DEBOUNCEL(l_btn);
+            Tick_DEBOUNCER(r_btn);
+            Tick_PONGStates(l_btn, r_btn);
+//            if(l_btndown){
+//                portb_out_write(0x000F);
+//                l_btndown = 0;
+//            }else if (r_btndown) {
+//                portb_out_write(0x00F0);
+//                r_btndown = 0;
+//            }
+        }
+       
+    }
     
 }
 

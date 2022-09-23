@@ -22,61 +22,65 @@ void TimerISR(){
 
 enum PONG_States {PONG_START, PONG_SERVE, PONG_MOVELEDL, PONG_MOVELEDR, PONG_LOSEL, PONG_LOSER} PONG_States;
 
-void Tick_PONGStates(unsigned char sw1, unsigned char sw2){
+void Tick_PONGStates(){
     static int cnt = 1;
     static unsigned char lr = 0;
     srand(time(NULL));
     switch(PONG_States){
         case PONG_START:
             lr = rand() % 2;
-            PONG_States = PONG_SERVE; //maybe move this to after the if else statements
             if(lr){
                 portb_out_write(LED_CONST << 7);
             }else{
                 portb_out_write(LED_CONST);
             }
-            break;
+        PONG_States = PONG_SERVE; //maybe move this to after the if else statements
+        break;
         case PONG_SERVE:
-            if(!(sw1 || sw2)){
-                PONG_States = PONG_SERVE;
-            }else if((lr == 0) && sw1 && !sw2){
-                cnt = 1;
+            if((lr == 0) && (r_btndown && !l_btndown)){
+                cnt = 0;
                 PONG_States = PONG_MOVELEDL;
-            }else if((lr == 1) && !sw1 && sw2){
-                cnt = 8;
+            }else if((lr == 1) && (!r_btndown && l_btndown)){
+                cnt = 7;
                 PONG_States = PONG_MOVELEDR;
             }
+            else{
+            PONG_States = PONG_SERVE;}
             break;
         case PONG_MOVELEDL:
-            if(cnt< 8){
-               PONG_States = PONG_MOVELEDL; 
-            }
-            else if((cnt>=1 && cnt < 8) && sw2){
+//            if(cnt < 7){
+//               PONG_States = PONG_MOVELEDL; 
+//            }
+            if((cnt >= 0 && cnt < 8) && l_btndown){
                 PONG_States = PONG_LOSEL;
                 cnt = 0;
-            }else if((cnt == 8) && sw2){
+            }else if((cnt == 8) && l_btndown){
                 PONG_States = PONG_MOVELEDR;
-            }else if((cnt == 8) && !sw2){
-                PONG_States == PONG_LOSEL;
+            }else if((cnt == 8) && !l_btndown){
+                PONG_States = PONG_LOSEL;
                 cnt = 0;
+            }else{
+                PONG_States = PONG_MOVELEDL; 
             }
             portb_out_write(LED_CONST << cnt);
             cnt++;
             break;
         case PONG_MOVELEDR:
-            if(cnt > 1){
-               PONG_States = PONG_MOVELEDR; 
-            }
-            else if((cnt>=1 && cnt < 8) && sw1){
+//            if(cnt > 0){
+//               PONG_States = PONG_MOVELEDR; 
+//            }
+            if((cnt >= 0 && cnt < 7) && r_btndown){
                 PONG_States = PONG_LOSER;
                 cnt = 0;
-            }else if((cnt == 8) && sw1){
+            }else if((cnt == 7) && r_btndown){
                 PONG_States = PONG_MOVELEDL;
-            }else if((cnt == 8) && !sw1){
-                PONG_States == PONG_LOSER;
+            }else if((cnt == 7) && !r_btndown){
+                PONG_States = PONG_LOSER;
                 cnt = 0;
+            }else{
+               PONG_States = PONG_MOVELEDR;  
             }
-            portb_out_write(LED_CONST >> cnt); //Note this should be portb_out_write(LED_CONST << cnt) still
+            portb_out_write(LED_CONST << cnt); //Note this should be portb_out_write(LED_CONST << cnt) still
             cnt--;
             break;
         case PONG_LOSEL:
@@ -112,17 +116,17 @@ void Tick_PONGStates(unsigned char sw1, unsigned char sw2){
 
 enum DEBOUNCEL {DEBOUNCEL_NOPUSH, DEBOUNCEL_MAYBEPUSH, DEBOUNCEL_MAYBENOPUSH, DEBOUNCEL_PUSHED} DEBOUNCEL;
 
-void Tick_DEBOUNCEL(unsigned char l_btn){
+void Tick_DEBOUNCEL(char l_btn){
     switch(DEBOUNCEL){
         case DEBOUNCEL_NOPUSH:
-            if(!l_btn){
+            if(l_btn){
                 DEBOUNCEL = DEBOUNCEL_NOPUSH;
             }else{
                 DEBOUNCEL = DEBOUNCEL_MAYBEPUSH;
             }
             break;
         case DEBOUNCEL_MAYBEPUSH:
-            if(!l_btn){
+            if(l_btn){
                 DEBOUNCEL = DEBOUNCEL_NOPUSH;
             }else{
                 DEBOUNCEL = DEBOUNCEL_PUSHED;
@@ -130,16 +134,15 @@ void Tick_DEBOUNCEL(unsigned char l_btn){
             }
             break;
         case DEBOUNCEL_PUSHED:
-            if(!l_btn){
+            if(l_btn){
                 DEBOUNCEL = DEBOUNCEL_MAYBENOPUSH;
             }else{
                 DEBOUNCEL = DEBOUNCEL_PUSHED;
             }
             break;
         case DEBOUNCEL_MAYBENOPUSH:
-            if(!l_btn){
+            if(l_btn){
                 DEBOUNCEL = DEBOUNCEL_NOPUSH;
-                l_btndown = 0;
             }else{
                 DEBOUNCEL = DEBOUNCEL_PUSHED;
             }
@@ -151,34 +154,33 @@ void Tick_DEBOUNCEL(unsigned char l_btn){
 
 enum DEBOUNCER {DEBOUNCER_NOPUSH, DEBOUNCER_MAYBEPUSH, DEBOUNCER_MAYBENOPUSH, DEBOUNCER_PUSHED} DEBOUNCER;
 
-void Tick_DEBOUNCER(unsigned char r_btn){
+void Tick_DEBOUNCER(char r_btn){
     switch(DEBOUNCER){
         case DEBOUNCER_NOPUSH:
-            if(!r_btn){
+            if(r_btn){
                 DEBOUNCER = DEBOUNCER_NOPUSH;
             }else{
                 DEBOUNCER = DEBOUNCER_MAYBEPUSH;
             }
             break;
         case DEBOUNCER_MAYBEPUSH:
-            if(!r_btn){
-                DEBOUNCER = DEBOUNCER_NOPUSH;
+            if(r_btn){
+                DEBOUNCER = DEBOUNCER_NOPUSH;              
             }else{
                 DEBOUNCER = DEBOUNCER_PUSHED;
                 r_btndown = 1;
             }
             break;
         case DEBOUNCER_PUSHED:
-            if(!r_btn){
+            if(r_btn){
                 DEBOUNCER = DEBOUNCER_MAYBENOPUSH;
             }else{
                 DEBOUNCER = DEBOUNCER_PUSHED;
             }
             break;
         case DEBOUNCER_MAYBENOPUSH:
-            if(!r_btn){
+            if(r_btn){
                 DEBOUNCER = DEBOUNCER_NOPUSH;
-                r_btndown = 0;
             }else{
                 DEBOUNCER = DEBOUNCER_PUSHED;
             }
@@ -192,23 +194,30 @@ void Tick_DEBOUNCER(unsigned char r_btn){
 void main(){
     porta_in_init();
     portb_out_init();
-    char sw1, sw2, in;
+    char l_btn, r_btn, in;
     zTimerSet(200);
     zTimerOn();
     
     while(1){
     //call states
         in = porta_in_read();
-        sw1 = in & 0x01;
-        sw2 = in & 0x02;
+        l_btn = in & 0x01;
+        r_btn = in & 0x02;
+        r_btn =  r_btn >> 1;
         if(zTimerReadFlag()){
-            Tick_DEBOUNCEL(sw1);
-            Tick_DEBOUNCER(sw2);
-            Tick_PONGStates(sw1, sw2);
+            Tick_DEBOUNCEL(l_btn);
+            Tick_DEBOUNCER(r_btn);
+            Tick_PONGStates();
+//            if(l_btndown){
+//                portb_out_write(0x000F);
+//                l_btndown = 0;
+//            }else if (r_btndown) {
+//                portb_out_write(0x00F0);
+//                r_btndown = 0;
+//            }
         }
-        
+       
     }
     
 }
-
 

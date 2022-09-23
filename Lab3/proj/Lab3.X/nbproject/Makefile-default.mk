@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../src/porta_in.c ../../src/portb_out.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=../../src/porta_in.c ../../src/portb_out.c main.c ztimer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1445274692/porta_in.o ${OBJECTDIR}/_ext/1445274692/portb_out.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1445274692/porta_in.o.d ${OBJECTDIR}/_ext/1445274692/portb_out.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1445274692/porta_in.o ${OBJECTDIR}/_ext/1445274692/portb_out.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ztimer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1445274692/porta_in.o.d ${OBJECTDIR}/_ext/1445274692/portb_out.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/ztimer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1445274692/porta_in.o ${OBJECTDIR}/_ext/1445274692/portb_out.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/_ext/1445274692/porta_in.o ${OBJECTDIR}/_ext/1445274692/portb_out.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ztimer.o
 
 # Source Files
-SOURCEFILES=../../src/porta_in.c ../../src/portb_out.c main.c
+SOURCEFILES=../../src/porta_in.c ../../src/portb_out.c main.c ztimer.c
 
 
 
@@ -107,42 +107,54 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1445274692/porta_in.o: ../../src/porta_in.c  .generated_files/flags/default/2238af143c94dd1bc6c9c13b3f542f45a15a5765 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1445274692/porta_in.o: ../../src/porta_in.c  .generated_files/flags/default/29d7075107467d9ee4d46507f93d9a1bfb399bb6 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1445274692" 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/porta_in.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/porta_in.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/porta_in.o.d" -o ${OBJECTDIR}/_ext/1445274692/porta_in.o ../../src/porta_in.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/porta_in.o.d" -o ${OBJECTDIR}/_ext/1445274692/porta_in.o ../../src/porta_in.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/_ext/1445274692/portb_out.o: ../../src/portb_out.c  .generated_files/flags/default/d8bfdd7bddeb54f7baa2da40c313f20040a80c89 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1445274692/portb_out.o: ../../src/portb_out.c  .generated_files/flags/default/b19f335be2eccc2cfa182f79d3c5ca1c32739507 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1445274692" 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/portb_out.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/portb_out.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/portb_out.o.d" -o ${OBJECTDIR}/_ext/1445274692/portb_out.o ../../src/portb_out.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/portb_out.o.d" -o ${OBJECTDIR}/_ext/1445274692/portb_out.o ../../src/portb_out.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/1241a8e2d20e3d983360a9347c7ff7fb202cf74c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/2c1444dfb89c42b976ece38140ad89436a9a66f4 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
+	
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/ed0cc6946a1d6286d700946efdbc0e62de897fee .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ztimer.o.d 
+	@${RM} ${OBJECTDIR}/ztimer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
 else
-${OBJECTDIR}/_ext/1445274692/porta_in.o: ../../src/porta_in.c  .generated_files/flags/default/46d8b07c19076ee320902a3031acee6ca4f43945 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1445274692/porta_in.o: ../../src/porta_in.c  .generated_files/flags/default/916b4848b790b17e665dc2647206324e910239d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1445274692" 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/porta_in.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/porta_in.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/porta_in.o.d" -o ${OBJECTDIR}/_ext/1445274692/porta_in.o ../../src/porta_in.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/_ext/1445274692/portb_out.o: ../../src/portb_out.c  .generated_files/flags/default/c019af2ed16a15938e5225105a0b82fe53bf72ad .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1445274692/portb_out.o: ../../src/portb_out.c  .generated_files/flags/default/c7d1c8021c2ff4f56bf6711c9d4e79b8b8bdec91 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1445274692" 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/portb_out.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1445274692/portb_out.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1445274692/portb_out.o.d" -o ${OBJECTDIR}/_ext/1445274692/portb_out.o ../../src/portb_out.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/f2ecad071a8bc462d368b5b3b10c5544edb7e40b .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/7b2b9be745e7c7ac8a2a6f2cdd58059682c86722 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
+	
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/fbeb4a88d5516484e5e689b93cd4fdf4d059309a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ztimer.o.d 
+	@${RM} ${OBJECTDIR}/ztimer.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
 endif
 
@@ -157,7 +169,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/Lab3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)      -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
+	${MP_CC} $(MP_EXTRA_LD_PRE) -g -mdebugger -D__MPLAB_DEBUGGER_PK3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)   -mreserve=data@0x0:0x1FC -mreserve=boot@0x1FC00490:0x1FC00BEF  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=__MPLAB_DEBUGGER_PK3=1,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
 	
 else
 ${DISTDIR}/Lab3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   

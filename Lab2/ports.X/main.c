@@ -17,9 +17,9 @@ int main(){
         in = porta_in_read();
         bot_bits = (in & 0x0F);
         if((in & 0x0010) == 0x0010){
-            out = ~(const_one << bot_bits);
-        }else{
             out = (const_one << bot_bits);
+        }else{
+            out = ~(const_one << bot_bits);
         }
         portb_out_write(out);
     }
