@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"Adafruit_2_4_LCD_Serial_Library" -fno-common   -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   C:\Users\sonkinj\Documents\ECE_414_Lab_Wu_Fowler\test_touch_rev.X\Adafruit_2_4_LCD_Serial_Library\tft_master.c
