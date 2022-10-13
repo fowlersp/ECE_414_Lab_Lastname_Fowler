@@ -30,39 +30,26 @@ extern "C" {
  * uint32_t calc_result: the result from the entire calculation
  */
 
-#define DB_SIZE 100
-#define OPERANDS_SIZE 100
-#define OPERATORS_SIZE 50
 
-struct CS_data{
-    char db[];
-    uint32_t operands[];
-    char operators[];
-    char *write_db;
-    char *write_operand;
-    char *write_operator;
-    char *read_db;
-    char db_empty;
-    uint32_t *read_operand;
-    char operands_empty;
-    char *read_operator;
-    char operators_empty;
-};
 
-enum CS {START, OPP_1, OPP_2}CS_States;
+char btn;
+char calculation_error;
+uint32_t result;
 
-void initCS_data();
+#define C 0x0A
+#define equ 0x0B
+#define plus 0x0C
+#define sub 0x0D
+#define mult 0x0E
+#define div 0x0F
+
+#define DIVBy0 0xFE
+#define OVERFLOW 0xFC
+
+enum CS {OPP_1, OPP_2}CS_States;
+
 void Tick_CSStates();
-inline char calculate(char operand_cntr);
-inline void clearData();
-inline char writeDB(char e);
-inline char writeOperands(uint32_t e);
-inline void writeOverOperands(uint32_t e);
-inline char writeOperators(char operat);
-inline char readDB();
-inline uint32_t readOperands();
-inline char readOperators();
-inline uint32_t exponent(uint32_t b, uint32_t e);
+inline char calculate(uint32_t operand_1, uint32_t operand_2, char operat);
 
 
 

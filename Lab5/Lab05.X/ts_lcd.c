@@ -1,20 +1,10 @@
-#include "ts_lcd.h"
+
 #include "glcdfont.c"
 #include "tft_master.h"
 #include "tft_gfx.h"
 #include "stdlib.h"
 #include "TouchScreen.h"
-
-#define x1 160
-#define x2 888
-#define y1 79
-#define y2 907
-#define x1Prime 0
-#define x2Prime 319
-#define y1Prime 0
-#define y2Prime 239
-#define zPressedLower 120
-#define zPressedUpper 500
+#include "ts_lcd.h"
 
 int value = 0; 
 
@@ -25,27 +15,27 @@ void ts_lcd_init(){
     tft_fillScreen(ILI9341_BLACK);
     
     //Draw calculator
-    tft_fillRoundRect(10, 40, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(10, 90, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(10, 140, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(10, 190, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(80, 40, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(80, 90, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(80, 140, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(80, 190, 65, 45, 5, ILI9341_RED);
-    tft_fillRoundRect(150, 40, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(150, 90, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(150, 140, 65, 45, 5, ILI9341_WHITE);
-    tft_fillRoundRect(150, 190, 65, 45, 5, ILI9341_BLUE);
-    tft_fillRoundRect(220, 40, 65, 45, 5, ILI9341_GREEN);
-    tft_fillRoundRect(220, 90, 65, 45, 5, ILI9341_GREEN);
-    tft_fillRoundRect(220, 140, 65, 45, 5, ILI9341_GREEN);
-    tft_fillRoundRect(220, 190, 65, 45, 5, ILI9341_GREEN);
+    tft_fillRoundRect(pos7x, pos7y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos4x, pos4y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos1x, pos1y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos0x, pos0y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos8x, pos8y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos5x, pos5y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos2x, pos2y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(posCx, posCy, width, height, 5, ILI9341_RED);
+    tft_fillRoundRect(pos9x, pos9y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos6x, pos6y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(pos3x, pos3y, width, height, 5, ILI9341_WHITE);
+    tft_fillRoundRect(posequx, posequy, width, height, 5, ILI9341_BLUE);
+    tft_fillRoundRect(posplusx, posplusy, width, height, 5, ILI9341_GREEN);
+    tft_fillRoundRect(possubx, possuby, width, height, 5, ILI9341_GREEN);
+    tft_fillRoundRect(posmulx, posmuly, width, height, 5, ILI9341_GREEN);
+    tft_fillRoundRect(posdivx, posdivy, width, height, 5, ILI9341_GREEN);
     
     tft_setCursor(15, 5);
     tft_setTextColor(ILI9341_WHITE); 
     tft_setTextSize(2);
-    tft_writeString("Number");
+    tft_writeString("0");
     
     tft_setTextColor(ILI9341_BLACK); 
     tft_setTextSize(2);
@@ -93,8 +83,12 @@ uint8_t ts_lcd_get_ts(uint16_t *x, uint16_t *y){
     int16_t xPoint = p.x;
     int16_t yPoint = p.y;
     int16_t zPoint = p.z;
-    *x = (((xPoint- x1)*(x2Prime - x1Prime))/(x2-x1)) + x1Prime;
-    *y = (((yPoint- y1)*(y2Prime - y1Prime))/(y2-y1)) + y1Prime;
+    int32_t tx;
+    int32_t ty;
+    tx = (((xPoint- x1)*(x2Prime - x1Prime))/(x2-x1)) + x1Prime;
+    *x = tx;
+    ty = (((yPoint- y1)*(y2Prime - y1Prime))/(y2-y1)) + y1Prime;
+    *y = ty;
     if(zPoint >=zPressedLower && zPoint <= zPressedUpper){
         return (uint8_t) 1;
     }else{
@@ -102,7 +96,13 @@ uint8_t ts_lcd_get_ts(uint16_t *x, uint16_t *y){
     }
 }
 
-<<<<<<< HEAD
+void ts_writeString(char* str){
+    tft_setCursor(15, 5);
+    tft_setTextColor(ILI9341_WHITE); 
+    tft_setTextSize(2);
+    tft_writeString(str);
+}
+/*
 void ts_lcd_location(){
     char buffer[30];
     
@@ -130,7 +130,9 @@ void ts_lcd_location(){
     tft_writeString(buffer);
     
 }
+*/
 
+/*
 void numb_press(int x, int y){
     if((x >= 10 && x <= 75) && (y >= 40 && y <= 85)){
         value = value*10 + 7;
@@ -144,16 +146,16 @@ void numb_press(int x, int y){
     else if((x >= 10 && x <= 75) && (y >= 190 && y <= 235)){
         value = value*10 + 0;
     }
-    else if((x >= 80 && x <= 145) && (y >= 40 && y <= 85)){
+    else if((x >= 80 && x <= 1height) && (y >= 40 && y <= 85)){
         value = value*10 + 8;
     }
-    else if((x >= 80 && x <= 145) && (y >= 90 && y <= 135)){
+    else if((x >= 80 && x <= 1height) && (y >= 90 && y <= 135)){
         value = value*10 + 5;
     }
-    else if((x >= 80 && x <= 145) && (y >= 140 && y <= 185)){
+    else if((x >= 80 && x <= 1height) && (y >= 140 && y <= 185)){
         value = value*10 + 2;
     }
-    else if((x >= 80 && x <= 145) && (y >= 190 && y <= 235)){
+    else if((x >= 80 && x <= 1height) && (y >= 190 && y <= 235)){
         // clear function
     }
     else if((x >= 150 && x <= 215) && (y >= 40 && y <= 85)){
@@ -180,13 +182,14 @@ void numb_press(int x, int y){
     else if((x >= 220 && x <= 275) && (y >= 190 && y <= 235)){
         //divide
     }
-    
-=======
+    */
+
+/*
 void touch_cursor(){
 tft.drawFastVLine(ts_lcd_get_ts.x, 0, 240, uint16_t color);
 tft.drawFastHLine(0, ts_lcd_get_ts.y, 320, uint16_t color);
 //tft.drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color)
 //tft.drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color)
 //tft.drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)
->>>>>>> 623964ce4d4014c69109e51ba9985b72c6d29a0f
 }
+ */
