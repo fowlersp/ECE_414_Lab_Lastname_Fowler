@@ -17,9 +17,7 @@
 #pragma config FWDTEN = OFF, JTAGEN = OFF, FSOSCEN = OFF
 
 #define RX_BUFFER 100
-/*
- * 
- */
+
 int main(int argc, char** argv) {
     uart1_init(9600);
     uart1_txwrite_str("Hello World! Jason Sonkin, Sam Fowler, Allen Wu");

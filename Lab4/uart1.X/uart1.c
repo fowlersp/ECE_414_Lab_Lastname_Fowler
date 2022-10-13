@@ -27,8 +27,7 @@ void uart1_txwrite(char c){
     WriteUART1(c);
 }
 void uart1_txwrite_str(char *cp){
-    while(!uart1_txrdy()){
-        
+    while(!uart1_txrdy()){       
     }
     putsUART1(cp);
 }

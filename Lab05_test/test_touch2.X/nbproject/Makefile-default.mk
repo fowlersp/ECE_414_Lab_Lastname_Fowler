@@ -107,74 +107,74 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/2f8e579368dedc014d860b8f58b8f7e3ebb72639 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/5520b9ef7d07d799ab80341dbae5f2c7ebdb9bd .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
 	@${RM} ${OBJECTDIR}/adc_intf.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/1377fb302142572f2a4be6ea110dd190aa1c4b6a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/d87cab9b3340d108371bbda07b4796fee3624417 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/glcdfont.o.d 
 	@${RM} ${OBJECTDIR}/glcdfont.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/2f801c5e832ff48f9f4e6b2a7d7b1f7d7959f47b .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/4f32dc7c7901371cf2354ace38aad491be7938e6 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
 	@${RM} ${OBJECTDIR}/tft_gfx.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/a63e7394af73c2a349f96b36bbc0f59a5fed8f61 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/d0f328381a550256e8f4346fcd228a6618df5bb6 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/touch_main_example.o: touch_main_example.c  .generated_files/flags/default/f6eb8da107049f89d84000560278b3c84b95355c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/touch_main_example.o: touch_main_example.c  .generated_files/flags/default/2689d4722d71ddae09f31fca74642b1e7fb4b99e .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/touch_main_example.o.d 
 	@${RM} ${OBJECTDIR}/touch_main_example.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/touch_main_example.o.d" -o ${OBJECTDIR}/touch_main_example.o touch_main_example.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/1b5ce635e6b65d97b1ccbba42486eeff957fb3c8 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/21ec1cbef22d78f35dc37981b5c94beb7615df24 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
 	@${RM} ${OBJECTDIR}/TouchScreen.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
 else
-${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/e0e8fb60026fc7d4f8c3d6da790b7ab4b25133df .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/a074830c6f21c944331e8e37c4ffe984de157c3d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
 	@${RM} ${OBJECTDIR}/adc_intf.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/ee97e85684d63907c7648f5595f1650f50e4be6d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/bb60f70ac68917f9ec679821939c2857cdb4bec9 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/glcdfont.o.d 
 	@${RM} ${OBJECTDIR}/glcdfont.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/f5f26bc8442783ccdd3374126448d9b396a8592c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/7a22d93a376e0dc1413f53c93b817f84c88c0213 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
 	@${RM} ${OBJECTDIR}/tft_gfx.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/54169cbe7a8ab3c7dc7805062f95eb401dabe207 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/4c25bc436c051ca811aad498c6e773031a0ee760 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/touch_main_example.o: touch_main_example.c  .generated_files/flags/default/647e11a17a51affbb5f23be690582a22f12113a6 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/touch_main_example.o: touch_main_example.c  .generated_files/flags/default/9830950edc11311c39246b406d33e7b2094e4bd9 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/touch_main_example.o.d 
 	@${RM} ${OBJECTDIR}/touch_main_example.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/touch_main_example.o.d" -o ${OBJECTDIR}/touch_main_example.o touch_main_example.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/ec984c35c4a0e9202a5a735007effc61a99db64 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/33432ae8460b7df0c1c7a785a760eee31b78af2c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
 	@${RM} ${OBJECTDIR}/TouchScreen.o 

@@ -20,9 +20,7 @@
 #define NUM_REPS 10
 #define PERIOD_T 1000
 #define BAUDRATE 9600
-/*
- * 
- */
+
 
 void test_uint8_mult()
 {
@@ -491,7 +489,6 @@ int main(int argc, char** argv) {
 
     uint32_t loopcount = 1;
     
-        
     printf("/n /n");
             
     uint32_t t1, t2;
@@ -499,6 +496,8 @@ int main(int argc, char** argv) {
     uart1_init(BAUDRATE);
     printf("Performance Summary: Time per operation statistics\r\n");
     zTimerOn();
+    
+    //MULTIPLY
     t1 = zTimerReadms();
     test_uint8_mult();
     t2 = zTimerReadms();
@@ -522,7 +521,20 @@ int main(int argc, char** argv) {
     t2 = zTimerReadms();
     printf("UINT64 MULT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
     zTimerSet(0);//why not
-        
+    
+    t1 = zTimerReadms();
+    test_float_mult();
+    t2 = zTimerReadms();
+    printf("FLOAT MULT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
+    zTimerSet(0);//why not
+    
+    t1 = zTimerReadms();
+    test_double_mult();
+    t2 = zTimerReadms();
+    printf("DOUBLE MULT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
+    zTimerSet(0);//why not
+    
+    //DIVIDE    
     t1 = zTimerReadms();
     test_uint8_div();
     t2 = zTimerReadms();
@@ -547,6 +559,19 @@ int main(int argc, char** argv) {
     printf("UINT64 DIVIDE: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
     zTimerSet(0);//why not
     
+    t1 = zTimerReadms();
+    test_float_div();
+    t2 = zTimerReadms();
+    printf("FLOAT DIV: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
+    zTimerSet(0);//why not
+    
+    t1 = zTimerReadms();
+    test_double_div();
+    t2 = zTimerReadms();
+    printf("DOUBLE DIV: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
+    zTimerSet(0);//why not
+    
+    //SUBTRACT
     t1 = zTimerReadms();
     test_uint8_subtract();
     t2 = zTimerReadms();
@@ -583,32 +608,7 @@ int main(int argc, char** argv) {
     printf("DOUBLE SUBTRACT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
     zTimerSet(0);//why not
     
-    t1 = zTimerReadms();
-    test_float_mult();
-    t2 = zTimerReadms();
-    printf("FLOAT MULT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
-    zTimerSet(0);//why not
-    
-    t1 = zTimerReadms();
-    test_double_mult();
-    t2 = zTimerReadms();
-    printf("DOUBLE MULT: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
-    zTimerSet(0);//why not
-    
-    t1 = zTimerReadms();
-    test_float_div();
-    t2 = zTimerReadms();
-    printf("FLOAT DIV: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
-    zTimerSet(0);//why not
-    
-    t1 = zTimerReadms();
-    test_double_div();
-    t2 = zTimerReadms();
-    printf("DOUBLE DIV: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
-    zTimerSet(0);//why not
-    
-    
-    
+    //ADD
     t1 = zTimerReadms();
     test_uint8_add();
     t2 = zTimerReadms();
@@ -644,10 +644,6 @@ int main(int argc, char** argv) {
     t2 = zTimerReadms();
     printf("DOUBLE ADD: %.06f us per operation\r\n", ((double)(t2 - t1)) / ((double) NUM_ITERATIONS) / (double) NUM_REPS*1000.0);
     zTimerSet(0);//why not
-    
-    
-    //loopcount=loopcount+6;
-    //printf("Loop count %.06f \r\n", loopcount);
     
     return (EXIT_SUCCESS);
 }
