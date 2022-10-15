@@ -102,7 +102,6 @@ uint8_t ts_lcd_get_ts(uint16_t *x, uint16_t *y){
     }
 }
 
-<<<<<<< HEAD
 void ts_lcd_location(){
     char buffer[30];
     
@@ -131,62 +130,11 @@ void ts_lcd_location(){
     
 }
 
-void numb_press(int x, int y){
-    if((x >= 10 && x <= 75) && (y >= 40 && y <= 85)){
-        value = value*10 + 7;
-    }
-    else if((x >= 10 && x <= 75) && (y >= 90 && y <= 135)){
-        value = value*10 + 4;
-    }
-    else if((x >= 10 && x <= 75) && (y >= 140 && y <= 185)){
-        value = value*10 + 1;
-    }
-    else if((x >= 10 && x <= 75) && (y >= 190 && y <= 235)){
-        value = value*10 + 0;
-    }
-    else if((x >= 80 && x <= 145) && (y >= 40 && y <= 85)){
-        value = value*10 + 8;
-    }
-    else if((x >= 80 && x <= 145) && (y >= 90 && y <= 135)){
-        value = value*10 + 5;
-    }
-    else if((x >= 80 && x <= 145) && (y >= 140 && y <= 185)){
-        value = value*10 + 2;
-    }
-    else if((x >= 80 && x <= 145) && (y >= 190 && y <= 235)){
-        // clear function
-    }
-    else if((x >= 150 && x <= 215) && (y >= 40 && y <= 85)){
-        value = value*10 + 9;
-    }
-    else if((x >= 150 && x <= 215) && (y >= 90 && y <= 135)){
-        value = value*10 + 6;
-    }
-    else if((x >= 150 && x <= 215) && (y >= 140 && y <= 185)){
-        value = value*10 + 3;
-    }
-    else if((x >= 150 && x <= 215) && (y >= 190 && y <= 235)){
-        // equal function
-    }
-    else if((x >= 220 && x <= 275) && (y >= 40 && y <= 85)){
-        //add
-    }
-    else if((x >= 220 && x <= 275) && (y >= 90 && y <= 135)){
-        //subtract
-    }
-    else if((x >= 220 && x <= 275) && (y >= 140 && y <= 185)){
-        //multiply
-    }
-    else if((x >= 220 && x <= 275) && (y >= 190 && y <= 235)){
-        //divide
-    }
+
     
-=======
-void touch_cursor(){
-tft.drawFastVLine(ts_lcd_get_ts.x, 0, 240, uint16_t color);
-tft.drawFastHLine(0, ts_lcd_get_ts.y, 320, uint16_t color);
+//void touch_cursor(){
+//tft.drawFastVLine(ts_lcd_get_ts.x, 0, 240, uint16_t color);
+//tft.drawFastHLine(0, ts_lcd_get_ts.y, 320, uint16_t color);
 //tft.drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color)
 //tft.drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color)
 //tft.drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)
->>>>>>> 623964ce4d4014c69109e51ba9985b72c6d29a0f
-}
