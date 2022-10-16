@@ -1,1 +1,5 @@
+<<<<<<<< HEAD:Lab5/Lab05.X/.generated_files/flags/default/ad93e172acfb5c8c80b655491af8a18273ff551b
  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   C:\Users\fowlersp\Documents\ECE_414_Lab_Wu_Fowler\Lab5\Lab05.X\calculator_fsm.c
+========
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   C:\Users\sonkinj\Documents\ECE_414_Lab_Wu_Fowler\Lab5\Lab05.X\main.c
+>>>>>>>> c233ad1d4f6a8fe619023f48b739ebda2bc9a46e:Lab5/Lab05.X/.generated_files/flags/default/e7942ce49600189c863ce41ce8f5cfaec7a098b7
