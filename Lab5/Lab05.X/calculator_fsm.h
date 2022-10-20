@@ -34,7 +34,7 @@ extern "C" {
 
 char btn;
 char calculation_error;
-uint32_t result;
+int32_t result;
 
 #define C 0x0A
 #define equ 0x0B
@@ -49,7 +49,7 @@ uint32_t result;
 enum CS {OPP_1, OPP_2}CS_States;
 
 void Tick_CSStates();
-inline char calculate(uint32_t operand_1, uint32_t operand_2, char operat);
+inline char calculate(int32_t operand_1, int32_t operand_2, char operat);
 
 
 

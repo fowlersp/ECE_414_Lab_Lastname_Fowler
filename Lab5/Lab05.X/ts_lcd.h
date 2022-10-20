@@ -27,8 +27,8 @@ extern "C" {
 #define x2Prime 319
 #define y1Prime 0
 #define y2Prime 239
-#define zPressedLower 120
-#define zPressedUpper 500
+#define zPressedLower 70
+#define zPressedUpper 800
 #define pos0x 10
 #define pos0y 190
 #define pos1x 10

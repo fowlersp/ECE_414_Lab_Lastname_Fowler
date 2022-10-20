@@ -15,63 +15,80 @@
 #pragma config FPBDIV = DIV_1, FPLLODIV = DIV_2
 #pragma config FWDTEN = OFF, JTAGEN = OFF, FSOSCEN = OFF
 
-uint16_t xp;
-uint16_t yp;
+uint16_t xp, xpp;
+uint16_t yp, ypp;
 uint16_t zp;
 uint16_t zp1;
 
-//enum DEBOUNCEL {DEBOUNCEL_NOPUSH, DEBOUNCEL_MAYBEPUSH, DEBOUNCEL_MAYBENOPUSH, DEBOUNCEL_PUSHED} DEBOUNCEL;
-//
-//void Tick_DEBOUNCE(unsigned char l_btn){
-//    switch(DEBOUNCEL){
-//        case DEBOUNCEL_NOPUSH:
-//            if(!l_btn){
-//                DEBOUNCEL = DEBOUNCEL_NOPUSH;
-//            }else{
-//                DEBOUNCEL = DEBOUNCEL_MAYBEPUSH;
-//            }
-//            break;
-//        case DEBOUNCEL_MAYBEPUSH:
-//            if(!l_btn){
-//                DEBOUNCEL = DEBOUNCEL_NOPUSH;
-//            }else{
-//                DEBOUNCEL = DEBOUNCEL_PUSHED;
-//                zp = 1;
-//            }
-//            break;
-//        case DEBOUNCEL_PUSHED:
-//            if(!l_btn){
-//                DEBOUNCEL = DEBOUNCEL_MAYBENOPUSH;
-//            }else{
-//                DEBOUNCEL = DEBOUNCEL_PUSHED;
-//            }
-//            break;
-//        case DEBOUNCEL_MAYBENOPUSH:
-//            if(!l_btn){
-//                DEBOUNCEL = DEBOUNCEL_NOPUSH;
-//            }else{
-//                DEBOUNCEL = DEBOUNCEL_PUSHED;
-//            }
-//            break;
-//        default:
-//            break;
-//    }
-//}
+enum DEBOUNCEL {DEBOUNCEL_NOPUSH, DEBOUNCEL_MAYBEPUSH, DEBOUNCEL_MAYBENOPUSH, DEBOUNCEL_PUSHED} DEBOUNCEL;
+
+void Tick_DEBOUNCE(unsigned char l_btn){
+    switch(DEBOUNCEL){
+        case DEBOUNCEL_NOPUSH:
+            if(l_btn){
+                DEBOUNCEL = DEBOUNCEL_NOPUSH;
+            }else{
+                DEBOUNCEL = DEBOUNCEL_MAYBEPUSH;
+            }
+            break;
+        case DEBOUNCEL_MAYBEPUSH:
+            if(l_btn){
+                DEBOUNCEL = DEBOUNCEL_NOPUSH;
+            }else{
+                DEBOUNCEL = DEBOUNCEL_PUSHED;
+                zp = 0;
+            }
+            break;
+        case DEBOUNCEL_PUSHED:
+            if(l_btn){
+                DEBOUNCEL = DEBOUNCEL_MAYBENOPUSH;
+            }else{
+                DEBOUNCEL = DEBOUNCEL_PUSHED;
+            }
+            break;
+        case DEBOUNCEL_MAYBENOPUSH:
+            if(l_btn){
+                DEBOUNCEL = DEBOUNCEL_NOPUSH;
+                zp = 1;
+            }else{
+                DEBOUNCEL = DEBOUNCEL_PUSHED;
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+void singlepulser(uint16_t zp1){
+    static uint16_t zpp;
+    if(zpp == 0 && zp1 == 0){
+        zp = 0;
+    }else if(zpp == 1 && zp1 == 0){
+        zp = 0;
+    }else if(zpp == 0 && zp1 == 1){
+        zp = 1;
+        xp = xpp;
+        yp = ypp;
+    }else{
+        zp = 0;
+    }
+    zpp = zp1;
+}
     
 void main(){
     uart1_init(9600);
     printf("testing");
     char buffer[30];
     SYSTEMConfigPerformance(PBCLK);
-    zTimerSet(50);
+    zTimerSet(88);
     zTimerOn();
     configureADC();
 
     ts_lcd_init();
     while(1){
         if(zTimerReadFlag()){
-            zp = ts_lcd_get_ts(&xp, &yp);
-            //Tick_DEBOUNCE(zp1);
+            zp1 = ts_lcd_get_ts(&xpp, &ypp);
+            singlepulser(zp1);
             if(zp && ((xp >= ppos0x) && (xp <= ppos0x + width)) && ((yp >= ppos0y) && (yp <= ppos0y + height))){
                 btn = 0x00;
             }else if(zp && ((xp >= ppos1x) && (xp <= ppos1x + width)) && ((yp >= ppos1y) && (yp <= ppos1y + height))){
@@ -132,3 +149,4 @@ void main(){
         //delay_ms(100);
     }
 }
+
