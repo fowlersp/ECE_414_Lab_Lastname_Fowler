@@ -6,12 +6,12 @@
                    projectFiles="true">
       <itemPath>../uart1.h</itemPath>
       <itemPath>../ztimer4.h</itemPath>
-      <itemPath>../config_clk.h</itemPath>
-      <itemPath>../ic1.h</itemPath>
       <itemPath>../oc1_plib.h</itemPath>
       <itemPath>pidControl.h</itemPath>
       <itemPath>userCommands.h</itemPath>
-      <itemPath>../../Lab5/Lab05.X/tft_master.h</itemPath>
+      <itemPath>tft_master.h</itemPath>
+      <itemPath>config_clk.h</itemPath>
+      <itemPath>ic1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -22,12 +22,13 @@
                    projectFiles="true">
       <itemPath>../uart1.c</itemPath>
       <itemPath>../ztimer4.c</itemPath>
-      <itemPath>../ic1.c</itemPath>
       <itemPath>../oc1_plib.c</itemPath>
       <itemPath>pidControl.c</itemPath>
       <itemPath>userCommands.c</itemPath>
       <itemPath>../main.c</itemPath>
-      <itemPath>../../Lab5/Lab05.X/tft_master.c</itemPath>
+      <itemPath>tft_master.c</itemPath>
+      <itemPath>ic1.c</itemPath>
+      <itemPath>ic1test.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -44,7 +45,7 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC32MX150F128B</targetDevice>
+        <targetDevice>PIC32MX250F128B</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
@@ -82,6 +83,22 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../main.c" ex="false" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
@@ -156,7 +173,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value=""/>
+        <property key="heap-size" value="0"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -227,6 +244,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
@@ -255,6 +273,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
@@ -275,6 +294,8 @@
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="true"/>
       </Tool>
+      <item path="ic1test.c" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

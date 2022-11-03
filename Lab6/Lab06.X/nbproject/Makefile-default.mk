@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../ic1.c ../oc1_plib.c pidControl.c userCommands.c ../main.c ../../Lab5/Lab05.X/tft_master.c
+SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ../main.c tft_master.c ic1.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/ic1.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/456747157/tft_master.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/ic1.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/456747157/tft_master.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ic1.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/ic1.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/456747157/tft_master.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o
 
 # Source Files
-SOURCEFILES=../uart1.c ../ztimer4.c ../ic1.c ../oc1_plib.c pidControl.c userCommands.c ../main.c ../../Lab5/Lab05.X/tft_master.c
+SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ../main.c tft_master.c ic1.c
 
 
 
@@ -90,7 +90,7 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=32MX150F128B
+MP_PROCESSOR_OPTION=32MX250F128B
 MP_LINKER_FILE_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
@@ -119,12 +119,6 @@ ${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/1
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ztimer4.o.d" -o ${OBJECTDIR}/_ext/1472/ztimer4.o ../ztimer4.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/be3ddfe06d02dc4e2742d09cbfb1825de646e28 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ic1.o.d" -o ${OBJECTDIR}/_ext/1472/ic1.o ../ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/975620bae036010397a0262bf593498539ce5ce3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/oc1_plib.o.d 
@@ -149,11 +143,17 @@ ${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/160bf99
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/3d91bee10827e4278c007603eb6469a70dd1a400 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/456747157" 
-	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o.d 
-	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/456747157/tft_master.o.d" -o ${OBJECTDIR}/_ext/456747157/tft_master.o ../../Lab5/Lab05.X/tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/c3b5bbd4d27b015b942d4bacf914277e9c573d3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_master.o.d 
+	@${RM} ${OBJECTDIR}/tft_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/4c9f9222884140cfa854db48fcf65e60edca879f .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ic1.o.d 
+	@${RM} ${OBJECTDIR}/ic1.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ic1.o.d" -o ${OBJECTDIR}/ic1.o ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 else
 ${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/86a7b64fc154d1ccebb10cf1d986f98b5e4f0725 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
@@ -167,12 +167,6 @@ ${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/b
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ztimer4.o.d" -o ${OBJECTDIR}/_ext/1472/ztimer4.o ../ztimer4.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
-${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/1f46a49e2888c33379eca527d04f06fc7f7ca8ac .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ic1.o.d" -o ${OBJECTDIR}/_ext/1472/ic1.o ../ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 ${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/4cf7901fd1c69d05e100cc414ee42f7dfcfa170d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
@@ -198,11 +192,17 @@ ${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/2d393a9
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/a01db153e4160f69d90135b9155b201f9e99a6b3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/456747157" 
-	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o.d 
-	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/456747157/tft_master.o.d" -o ${OBJECTDIR}/_ext/456747157/tft_master.o ../../Lab5/Lab05.X/tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/cc6cdab6981c3a3e3c21ca406c3d0f7963745947 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_master.o.d 
+	@${RM} ${OBJECTDIR}/tft_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/c3b8844bc39fdd3aab4806b8650739f32822aa46 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ic1.o.d 
+	@${RM} ${OBJECTDIR}/ic1.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ic1.o.d" -o ${OBJECTDIR}/ic1.o ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 endif
 
@@ -217,12 +217,12 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -g -mdebugger -D__MPLAB_DEBUGGER_PK3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  -D _SUPPRESS_PLIB_WARNING $(COMPARISON_BUILD)   -mreserve=data@0x0:0x1FC -mreserve=boot@0x1FC00490:0x1FC00BEF  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=__MPLAB_DEBUGGER_PK3=1,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
+	${MP_CC} $(MP_EXTRA_LD_PRE) -g -mdebugger -D__MPLAB_DEBUGGER_PK3=1 -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  -D _SUPPRESS_PLIB_WARNING $(COMPARISON_BUILD)   -mreserve=data@0x0:0x1FC -mreserve=boot@0x1FC00490:0x1FC00BEF  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=__MPLAB_DEBUGGER_PK3=1,--defsym=_min_heap_size=0,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
 	
 else
 ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  -D _SUPPRESS_PLIB_WARNING $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -o ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)  -legacy-libc  -D _SUPPRESS_PLIB_WARNING $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=0,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml 
 	${MP_CC_DIR}\\xc32-bin2hex ${DISTDIR}/Lab06.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} 
 endif
 

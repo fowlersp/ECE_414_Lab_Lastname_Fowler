@@ -23,7 +23,7 @@ extern "C" {
     void setProportionalGain(uint16_t spg);
     void setIntegralGain(uint16_t sig);
     void setDerivativeGain(uint16_t sdg);
-    void TickPidControl();
+    void TickPidControl(uint16_t rpm);
 
 
 #ifdef	__cplusplus
