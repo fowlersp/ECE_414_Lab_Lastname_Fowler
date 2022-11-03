@@ -107,98 +107,98 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/82876074deebf8e4fa5edd3c1162bc5572337aba .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/c9478c387757a9f5f180392689437b7510a1c701 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/uart1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/uart1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/uart1.o.d" -o ${OBJECTDIR}/_ext/1472/uart1.o ../uart1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/1fac25fce66e553513d66c09f197c66eb57b8b52 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/15728d5982354c530e9cab393d7b0845401abda8 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ztimer4.o.d" -o ${OBJECTDIR}/_ext/1472/ztimer4.o ../ztimer4.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/923309506eb4e3036cc7af17ed61f030abeacd50 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/be3ddfe06d02dc4e2742d09cbfb1825de646e28 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ic1.o.d" -o ${OBJECTDIR}/_ext/1472/ic1.o ../ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/ad2243ecc5c8d40a114fa7bc3031954242eba9f2 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/975620bae036010397a0262bf593498539ce5ce3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/oc1_plib.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/oc1_plib.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/oc1_plib.o.d" -o ${OBJECTDIR}/_ext/1472/oc1_plib.o ../oc1_plib.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/pidControl.o: pidControl.c  .generated_files/flags/default/65e02cdb4ba8ccd177e92ccac10015cefa085776 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/pidControl.o: pidControl.c  .generated_files/flags/default/e05ad37b86b1c469a492e364355a173f2c9a26c2 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/pidControl.o.d 
 	@${RM} ${OBJECTDIR}/pidControl.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pidControl.o.d" -o ${OBJECTDIR}/pidControl.o pidControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/10090b2dbc56cc0b9c7ba25b6d4af3a526d5d97c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/acd1ce8ebee5724c895767a52f09c29db79a6807 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/userCommands.o.d 
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/5bd6f2552199cd2789f88562094778f757de2732 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/160bf99d6ce556833991aa5ab55ab6f2db28c6ea .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/a9cacdcfb7c0e24862e8068bea61cf0abfad877e .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/3d91bee10827e4278c007603eb6469a70dd1a400 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/456747157" 
 	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/456747157/tft_master.o.d" -o ${OBJECTDIR}/_ext/456747157/tft_master.o ../../Lab5/Lab05.X/tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 else
-${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/aa50147b92b5f103d96e457d20a71c40c78a4294 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/86a7b64fc154d1ccebb10cf1d986f98b5e4f0725 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/uart1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/uart1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/uart1.o.d" -o ${OBJECTDIR}/_ext/1472/uart1.o ../uart1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/1a2359e8d8a76b614c05fe2a8449602962ce2e12 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/ztimer4.o: ../ztimer4.c  .generated_files/flags/default/b326ab793362e1efafb5289790e9fa977a9270c9 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/ztimer4.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ztimer4.o.d" -o ${OBJECTDIR}/_ext/1472/ztimer4.o ../ztimer4.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/8ee21e7e28608e3e7e805fe81df43c6987f65714 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/ic1.o: ../ic1.c  .generated_files/flags/default/1f46a49e2888c33379eca527d04f06fc7f7ca8ac .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/ic1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/ic1.o.d" -o ${OBJECTDIR}/_ext/1472/ic1.o ../ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/8308516892053e4d3adb3605c76689c309e6b591 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/oc1_plib.o: ../oc1_plib.c  .generated_files/flags/default/4cf7901fd1c69d05e100cc414ee42f7dfcfa170d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/oc1_plib.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/oc1_plib.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/oc1_plib.o.d" -o ${OBJECTDIR}/_ext/1472/oc1_plib.o ../oc1_plib.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/pidControl.o: pidControl.c  .generated_files/flags/default/78605c8af97afc8dfd5ed0daf3271111863094c3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/pidControl.o: pidControl.c  .generated_files/flags/default/86401743ac6a29eac3bea48de8fd2ecf55d36c9d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/pidControl.o.d 
 	@${RM} ${OBJECTDIR}/pidControl.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pidControl.o.d" -o ${OBJECTDIR}/pidControl.o pidControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/b0ce3f3213ba0e08d6041fd2c7e80226087611da .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/be503c0d7eb368f694eab133303f96fc36ceabe3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/userCommands.o.d 
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/f013c14949744ddf9d0033902d854806b676997d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/2d393a97e05e79025597b0b7549fab68bfb2e45c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/c2116fa6cf71db4cb74b35cf6743533d8ca5746c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/_ext/456747157/tft_master.o: ../../Lab5/Lab05.X/tft_master.c  .generated_files/flags/default/a01db153e4160f69d90135b9155b201f9e99a6b3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}/_ext/456747157" 
 	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/456747157/tft_master.o 

@@ -12,7 +12,7 @@ void setDerivativeGain(uint16_t sdg){
     dg = sdg;
 }
 
-void TickPidControl(){
+void TickPidControl(uint16_t rpm){
     static uint16_t actualRPMPrev;
     static uint16_t integ;
     uint16_t error;
@@ -24,7 +24,8 @@ void TickPidControl(){
             integ = 0;
             PID_STATES = PID_CTRL;
             break;
-        case PID_CTRL:    
+        case PID_CTRL:
+            actualRPM = rpm;
             error = desiredRPM - actualRPM;
             deriv = actualRPM - actualRPMPrev;
             integ = integ + error;
@@ -34,6 +35,7 @@ void TickPidControl(){
                 integ = integMin;
             }
             actuator = pg*error + ig*integ - dg*deriv;
+            actualRPMPrev = actualRPM;
             break;
     }
 }

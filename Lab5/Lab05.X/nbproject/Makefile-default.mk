@@ -107,146 +107,146 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/porta_in.o: porta_in.c  .generated_files/flags/default/bf2250864f2072e9892e12618f7f57480b0a5726 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/porta_in.o: porta_in.c  .generated_files/flags/default/3e2c04b728313b715afb4344a4cc611c9ff1b2e0 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/porta_in.o.d 
 	@${RM} ${OBJECTDIR}/porta_in.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/porta_in.o.d" -o ${OBJECTDIR}/porta_in.o porta_in.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/portb_out.o: portb_out.c  .generated_files/flags/default/b0e7564125f71cd2204bad6c34f564a2fcb71e38 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/portb_out.o: portb_out.c  .generated_files/flags/default/23629841876494cbd2d7aa1df1f64aab1d33246c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/portb_out.o.d 
 	@${RM} ${OBJECTDIR}/portb_out.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/portb_out.o.d" -o ${OBJECTDIR}/portb_out.o portb_out.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/uart1.o: uart1.c  .generated_files/flags/default/3897032472d1843ae8d31a7dfe6be41b36571f79 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/uart1.o: uart1.c  .generated_files/flags/default/21776faf57368fe259ac6af38f6b2ad171b75114 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/uart1.o.d 
 	@${RM} ${OBJECTDIR}/uart1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/uart1.o.d" -o ${OBJECTDIR}/uart1.o uart1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/9e8d716fc7c1c314aae8820df16f2c9a14640661 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/62ed7636288c37c1dd88fab7f119e491a081a879 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ztimer.o.d 
 	@${RM} ${OBJECTDIR}/ztimer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/dd6b20cce56e0ea362c87462f974660d74680955 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/8b8cdbfcce3d15f09e209ce40050591f67076f20 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/glcdfont.o.d 
 	@${RM} ${OBJECTDIR}/glcdfont.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/8fde8a6cb446e563733db4579d211ea7dac0539 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/389ff593e568275be7b25bb1aa7d764c6f35b3e9 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
 	@${RM} ${OBJECTDIR}/tft_gfx.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/86818a88b732b264befc7180d35f623dfd55d1ad .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/f6721ed3a96229f4f4b8415c9f2d4f9f2e8f1a57 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/8ef91ea868923dd4173a7ffae7324bf1a9c20e50 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/bc9b423aec79b81e27c8a0be8183ce04ca64da8c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/e6acb971c81fabcf553f7d6c8009620cf97a331c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/8c6004ce134eec5b6c68b9d377d0e231aa07e05f .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
 	@${RM} ${OBJECTDIR}/ts_lcd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/b91a0b5e53bb77906783f4a2aee0b398a875d906 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/21fedd4a7eed8ae5078e988ce1b3954a4488e10e .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
 	@${RM} ${OBJECTDIR}/TouchScreen.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/cc3c8187205206010aaa3f15ec6d45e99f9af62a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/d8c3d0176891c47853e08d2f02fa0e37e4188ddc .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
 	@${RM} ${OBJECTDIR}/adc_intf.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/338781132dc7b1e04abe8f1b1303c96eac43e63a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/2a32c6beaf626e6c4f4f66f2499d10d9733b5db6 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o.d 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/calculator_fsm.o.d" -o ${OBJECTDIR}/calculator_fsm.o calculator_fsm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
 else
-${OBJECTDIR}/porta_in.o: porta_in.c  .generated_files/flags/default/8595c28ac0810e9e3603d81261d9f6dff5634c3d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/porta_in.o: porta_in.c  .generated_files/flags/default/ea4bf8fb19af09cac0d8829777c41769074e88da .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/porta_in.o.d 
 	@${RM} ${OBJECTDIR}/porta_in.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/porta_in.o.d" -o ${OBJECTDIR}/porta_in.o porta_in.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/portb_out.o: portb_out.c  .generated_files/flags/default/9c5aed1a698511a4ee155b1b548a10226ca1104c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/portb_out.o: portb_out.c  .generated_files/flags/default/bd98d55f82842fc75f2790858ab23f284578ed13 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/portb_out.o.d 
 	@${RM} ${OBJECTDIR}/portb_out.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/portb_out.o.d" -o ${OBJECTDIR}/portb_out.o portb_out.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/uart1.o: uart1.c  .generated_files/flags/default/506058c7c1aed519f6a06149d4af6a644c23303a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/uart1.o: uart1.c  .generated_files/flags/default/b3e423588631b5603a06ddaccbc194f5fa203323 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/uart1.o.d 
 	@${RM} ${OBJECTDIR}/uart1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/uart1.o.d" -o ${OBJECTDIR}/uart1.o uart1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/d85ecce2e22fe77f7f2f572ff04cc51e61028d2a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/ztimer.o: ztimer.c  .generated_files/flags/default/37ce7e7a9a422abc18498f427833d352f015ef78 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ztimer.o.d 
 	@${RM} ${OBJECTDIR}/ztimer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ztimer.o.d" -o ${OBJECTDIR}/ztimer.o ztimer.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/505e6a06f26ffb7d87f7465411346985bb34d28f .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/907e9a6e2a95ed0d531ea0ad8311e818214ccfde .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/glcdfont.o.d 
 	@${RM} ${OBJECTDIR}/glcdfont.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/d7695d3172ee97cb0b1b1d18f1706278e80a3472 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/c119a6e83f478c9a3558cd4848a6c31043e77624 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
 	@${RM} ${OBJECTDIR}/tft_gfx.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/3c32589a18e7633e96f42b42bcb5ff52bd151684 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/1d9cfdfd5c256ca5b40a9f5d01c2347d3e9c5a46 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/e7942ce49600189c863ce41ce8f5cfaec7a098b7 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/9a76c4be45e48a1ec3bdf156d9954159a590740f .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/6891a81817429b7d3260661bb84274d4c81dc968 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/cf53e965c28d7b69de9e3fe818b2c7c0052a2fc3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
 	@${RM} ${OBJECTDIR}/ts_lcd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/63d017f1c97a8c5b31068b825d6c64c9f845307b .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/26a539813ee7265797fc46cc099fe6ffaef67edb .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
 	@${RM} ${OBJECTDIR}/TouchScreen.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/4b2599cc3974e559fdee77130973d5638f19c464 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/261606771488bb90866932be20fc5e37df7e0d93 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
 	@${RM} ${OBJECTDIR}/adc_intf.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/acf0956a27fac9132d4a74126f6936f3a2184fbf .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/ad93e172acfb5c8c80b655491af8a18273ff551b .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o.d 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o 

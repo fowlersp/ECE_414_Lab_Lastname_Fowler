@@ -22,7 +22,7 @@
         OpenCapture1( IC_EVERY_RISE_EDGE | IC_INT_1CAPTURE | IC_TIMER3_SRC | IC_ON );
         ConfigIntCapture1(IC_INT_ON | IC_INT_PRIOR_3 | IC_INT_SUB_PRIOR_3 );
         INTClearFlag(INT_IC1);
-        PPSInput(3, IC1, RPB13);          // connect PIN 6 to IC1 capture unit
+        PPSInput(3, IC1, RPB13);          // connect PIN 24 to IC1 capture unit
         mPORTBSetPinsDigitalIn(BIT_13);  // Set port as input (important!)
         capture1 = 0;
         last_capture1 = 0;
@@ -77,8 +77,8 @@
         flag = capture_flag;
         pd_ticks = ic1_getperiod();
         if (flag) {
-        rpm_l = ((PBCLK/(STRIPES*TIMER_PRESCALE)) * 60) / pd_ticks;
-        rpm = (uint16_t) rpm_l;
+            rpm_l = ((PBCLK/(STRIPES*TIMER_PRESCALE)) * 60) / pd_ticks;
+            rpm = (uint16_t) rpm_l;
         } else {
             rpm = 0;
         }
