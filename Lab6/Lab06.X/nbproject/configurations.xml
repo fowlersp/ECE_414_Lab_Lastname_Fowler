@@ -12,6 +12,7 @@
       <itemPath>tft_master.h</itemPath>
       <itemPath>config_clk.h</itemPath>
       <itemPath>ic1.h</itemPath>
+      <itemPath>../oc2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -25,10 +26,11 @@
       <itemPath>../oc1_plib.c</itemPath>
       <itemPath>pidControl.c</itemPath>
       <itemPath>userCommands.c</itemPath>
-      <itemPath>../main.c</itemPath>
       <itemPath>tft_master.c</itemPath>
       <itemPath>ic1.c</itemPath>
       <itemPath>ic1test.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>../oc2.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -83,22 +85,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../main.c" ex="false" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
-      </item>
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
@@ -295,6 +281,20 @@
         <property key="programoptions.uselvpprogramming" value="true"/>
       </Tool>
       <item path="ic1test.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
     </conf>
   </confs>

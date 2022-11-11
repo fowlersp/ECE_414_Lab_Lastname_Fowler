@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ../main.c tft_master.c ic1.c
+SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c tft_master.c ic1.c main.c ../oc2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ic1.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1472/oc2.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ic1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/1472/oc2.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1472/oc2.o
 
 # Source Files
-SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ../main.c tft_master.c ic1.c
+SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c tft_master.c ic1.c main.c ../oc2.c
 
 
 
@@ -137,12 +137,6 @@ ${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/acd1
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/160bf99d6ce556833991aa5ab55ab6f2db28c6ea .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/c3b5bbd4d27b015b942d4bacf914277e9c573d3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
@@ -154,6 +148,18 @@ ${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/4c9f9222884140cfa854db
 	@${RM} ${OBJECTDIR}/ic1.o.d 
 	@${RM} ${OBJECTDIR}/ic1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ic1.o.d" -o ${OBJECTDIR}/ic1.o ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/c8a92b788d40aa1cea5a3603b46c12207bffcb34 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/_ext/1472/oc2.o: ../oc2.c  .generated_files/flags/default/313fc68365958755772481aeff293c60cb75cead .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/oc2.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/oc2.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/oc2.o.d" -o ${OBJECTDIR}/_ext/1472/oc2.o ../oc2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 else
 ${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/86a7b64fc154d1ccebb10cf1d986f98b5e4f0725 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
@@ -186,12 +192,6 @@ ${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/be50
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  .generated_files/flags/default/2d393a97e05e79025597b0b7549fab68bfb2e45c .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/cc6cdab6981c3a3e3c21ca406c3d0f7963745947 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
@@ -203,6 +203,18 @@ ${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/c3b8844bc39fdd3aab4806
 	@${RM} ${OBJECTDIR}/ic1.o.d 
 	@${RM} ${OBJECTDIR}/ic1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ic1.o.d" -o ${OBJECTDIR}/ic1.o ic1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/d8d07fe28f20a2634281d1f989579019948a61da .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/_ext/1472/oc2.o: ../oc2.c  .generated_files/flags/default/75ad71b047cbeada45358c77eb3522549262d213 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/oc2.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/oc2.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/oc2.o.d" -o ${OBJECTDIR}/_ext/1472/oc2.o ../oc2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 endif
 
