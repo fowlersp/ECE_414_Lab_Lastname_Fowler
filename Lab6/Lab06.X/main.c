@@ -2,12 +2,13 @@
 #include "ic1.h"
 #include "pidControl.h"
 #include "oc1_plib.h"
+#include "oc2.h"
 #include "uart1.h"
 #include "ztimer4.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "userCommands.h"
+#include "userCommands.h"
 
 #define RX_BUFFER 100
 
@@ -16,10 +17,10 @@ void main(){
     setIntegralGain(3);
     setDerivativeGain(10);
     oc1_init_plib(0);
-    oc1_setduty_plib(0xB000);//useless
+    //oc2_init_plib(0);
     ic1_init();
     uart1_init(9600);
-    zTimerSet(6);
+    zTimerSet(35);
     zTimerOn();
     INTEnableSystemMultiVectoredInt();
     char buffer[RX_BUFFER];
@@ -32,13 +33,13 @@ void main(){
     while(1){
         if(zTimerReadFlag()){
             int aaa=ic1_getrpm();
-            //printf("rpm: %d\r\n desiredRPM: %d\r\n actuator: %d\r\n", ic1_getrpm(), desiredRPM, actuator);
+            //printf("rpm: %d\r desiredRPM: %d\r\n actuator: %d\r\n", ic1_getrpm(), desiredRPM, actuator);
             //printf("rpm: %d\r ,desiredRPM: %d\r ,actuator: %d\r\n", aaa, desiredRPM, actuator/1000);
             TickPidControl(aaa);//not working, not increasing actuator when increased load/lowered rpm read
 //            int go = 3*actuator;
 //            if (go>65534){go=65535;}
             oc1_setduty_plib(actuator);
-            oc2_setduty_plib(rpm*10);//need to pass value put
+            //oc2_setduty_plib(actualRPM*10);//need to pass value put
         }
         if(uart1_rxrdy()){
             char tmp = uart1_rxread();
