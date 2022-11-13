@@ -38,7 +38,7 @@ void main(){
 //            int go = 3*actuator;
 //            if (go>65534){go=65535;}
             oc1_setduty_plib(actuator);
-            oc2_setduty_plib(rpm*10);//need to pass value put
+            //oc2_setduty_plib(rpm*10);//need to pass value put
         }
         if(uart1_rxrdy()){
             char tmp = uart1_rxread();
