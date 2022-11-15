@@ -6,8 +6,9 @@
 
 void uart1_init(uint32_t baudrate){
     __XC_UART = 1;
-    PPSOutput(1, RPB15, U1TX);
-    PPSInput(3, U1RX, RPA2);
+    PPSInput(3, U1RX, RPA4); // board with touch screen
+    PPSOutput(1, RPB15, U1TX); // board with touch screen
+    //PPSInput(3, U1RX, RPA2);
     OpenUART1(UART_EN | UART_NO_PAR_8BIT | UART_1STOPBIT | UART_BRGH_SIXTEEN, UART_TX_ENABLE | UART_RX_ENABLE, setBaudRate(baudrate));
 }
 
