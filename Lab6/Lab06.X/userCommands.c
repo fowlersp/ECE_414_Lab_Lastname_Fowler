@@ -10,8 +10,9 @@ void parseUserCommands(char *command){
     //printf("command: %s\r\n", commandType);
     //desiredRPM = value;
     if('s' == commandType[0]){
-        printf("command: %s\r\n", commandType);
+        
         desiredRPM = value;
+        printf("command: %s\r\n ,  desiredRPM: %d\r\n", commandType, desiredRPM);
     }else if('p' == commandType[0]){
         setProportionalGain(value);
     }else if('i' == commandType[0]){

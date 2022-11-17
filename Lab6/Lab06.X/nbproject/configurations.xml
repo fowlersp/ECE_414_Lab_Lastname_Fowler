@@ -9,10 +9,14 @@
       <itemPath>../oc1_plib.h</itemPath>
       <itemPath>pidControl.h</itemPath>
       <itemPath>userCommands.h</itemPath>
-      <itemPath>tft_master.h</itemPath>
       <itemPath>config_clk.h</itemPath>
       <itemPath>ic1.h</itemPath>
       <itemPath>oc2.h</itemPath>
+      <itemPath>tft_gfx.h</itemPath>
+      <itemPath>tft_master.h</itemPath>
+      <itemPath>ts_lcd.h</itemPath>
+      <itemPath>ts_lcd_lab06.h</itemPath>
+      <itemPath>adc_intf.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,11 +30,16 @@
       <itemPath>../oc1_plib.c</itemPath>
       <itemPath>pidControl.c</itemPath>
       <itemPath>userCommands.c</itemPath>
-      <itemPath>tft_master.c</itemPath>
       <itemPath>ic1.c</itemPath>
       <itemPath>ic1test.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>oc2.c</itemPath>
+      <itemPath>tft_gfx.c</itemPath>
+      <itemPath>tft_master.c</itemPath>
+      <itemPath>ts_lcd.c</itemPath>
+      <itemPath>glcdfont.c</itemPath>
+      <itemPath>ts_lcd_lab06.c</itemPath>
+      <itemPath>adc_intf.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -251,35 +260,6 @@
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="true"/>
       </PKOBSKDEPlatformTool>
-      <Tool>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="firmware.download.all" value="false"/>
-        <property key="lastid" value=""/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="1d000000-1d01ffff"/>
-        <property key="memories.userotp" value="true"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value=""/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges"
-                  value="${memories.eedata.default}"/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="true"/>
-      </Tool>
       <item path="ic1test.c" ex="true" overriding="false">
         <C32>
         </C32>

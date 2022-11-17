@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=porta_in.c portb_out.c uart1.c ztimer.c glcdfont.c tft_gfx.c tft_master.c main.c ts_lcd.c TouchScreen.c adc_intf.c calculator_fsm.c
+SOURCEFILES_QUOTED_IF_SPACED=porta_in.c portb_out.c uart1.c ztimer.c glcdfont.c tft_gfx.c tft_master.c main.c ts_lcd.c adc_intf.c calculator_fsm.c TouchScreen.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/porta_in.o ${OBJECTDIR}/portb_out.o ${OBJECTDIR}/uart1.o ${OBJECTDIR}/ztimer.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/TouchScreen.o ${OBJECTDIR}/adc_intf.o ${OBJECTDIR}/calculator_fsm.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/porta_in.o.d ${OBJECTDIR}/portb_out.o.d ${OBJECTDIR}/uart1.o.d ${OBJECTDIR}/ztimer.o.d ${OBJECTDIR}/glcdfont.o.d ${OBJECTDIR}/tft_gfx.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/ts_lcd.o.d ${OBJECTDIR}/TouchScreen.o.d ${OBJECTDIR}/adc_intf.o.d ${OBJECTDIR}/calculator_fsm.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/porta_in.o ${OBJECTDIR}/portb_out.o ${OBJECTDIR}/uart1.o ${OBJECTDIR}/ztimer.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/adc_intf.o ${OBJECTDIR}/calculator_fsm.o ${OBJECTDIR}/TouchScreen.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/porta_in.o.d ${OBJECTDIR}/portb_out.o.d ${OBJECTDIR}/uart1.o.d ${OBJECTDIR}/ztimer.o.d ${OBJECTDIR}/glcdfont.o.d ${OBJECTDIR}/tft_gfx.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/ts_lcd.o.d ${OBJECTDIR}/adc_intf.o.d ${OBJECTDIR}/calculator_fsm.o.d ${OBJECTDIR}/TouchScreen.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/porta_in.o ${OBJECTDIR}/portb_out.o ${OBJECTDIR}/uart1.o ${OBJECTDIR}/ztimer.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/TouchScreen.o ${OBJECTDIR}/adc_intf.o ${OBJECTDIR}/calculator_fsm.o
+OBJECTFILES=${OBJECTDIR}/porta_in.o ${OBJECTDIR}/portb_out.o ${OBJECTDIR}/uart1.o ${OBJECTDIR}/ztimer.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/adc_intf.o ${OBJECTDIR}/calculator_fsm.o ${OBJECTDIR}/TouchScreen.o
 
 # Source Files
-SOURCEFILES=porta_in.c portb_out.c uart1.c ztimer.c glcdfont.c tft_gfx.c tft_master.c main.c ts_lcd.c TouchScreen.c adc_intf.c calculator_fsm.c
+SOURCEFILES=porta_in.c portb_out.c uart1.c ztimer.c glcdfont.c tft_gfx.c tft_master.c main.c ts_lcd.c adc_intf.c calculator_fsm.c TouchScreen.c
 
 
 
@@ -161,12 +161,6 @@ ${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/8c6004ce134eec5b
 	@${RM} ${OBJECTDIR}/ts_lcd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/21fedd4a7eed8ae5078e988ce1b3954a4488e10e .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
-	@${RM} ${OBJECTDIR}/TouchScreen.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/d8c3d0176891c47853e08d2f02fa0e37e4188ddc .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
@@ -178,6 +172,12 @@ ${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/
 	@${RM} ${OBJECTDIR}/calculator_fsm.o.d 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/calculator_fsm.o.d" -o ${OBJECTDIR}/calculator_fsm.o calculator_fsm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/21fedd4a7eed8ae5078e988ce1b3954a4488e10e .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
+	@${RM} ${OBJECTDIR}/TouchScreen.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
 else
 ${OBJECTDIR}/porta_in.o: porta_in.c  .generated_files/flags/default/ea4bf8fb19af09cac0d8829777c41769074e88da .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
@@ -234,12 +234,6 @@ ${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/cf53e965c28d7b69
 	@${RM} ${OBJECTDIR}/ts_lcd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/26a539813ee7265797fc46cc099fe6ffaef67edb .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
-	@${RM} ${OBJECTDIR}/TouchScreen.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/261606771488bb90866932be20fc5e37df7e0d93 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc_intf.o.d 
@@ -251,6 +245,12 @@ ${OBJECTDIR}/calculator_fsm.o: calculator_fsm.c  .generated_files/flags/default/
 	@${RM} ${OBJECTDIR}/calculator_fsm.o.d 
 	@${RM} ${OBJECTDIR}/calculator_fsm.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/calculator_fsm.o.d" -o ${OBJECTDIR}/calculator_fsm.o calculator_fsm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/TouchScreen.o: TouchScreen.c  .generated_files/flags/default/26a539813ee7265797fc46cc099fe6ffaef67edb .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/TouchScreen.o.d 
+	@${RM} ${OBJECTDIR}/TouchScreen.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/TouchScreen.o.d" -o ${OBJECTDIR}/TouchScreen.o TouchScreen.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D_SUPPRESS_PLIB_WARNING   
 	
 endif
 

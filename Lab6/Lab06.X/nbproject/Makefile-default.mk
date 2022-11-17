@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c tft_master.c ic1.c main.c oc2.c
+SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c ts_lcd.c glcdfont.c ts_lcd_lab06.c adc_intf.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ic1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/oc2.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/ic1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/oc2.o.d ${OBJECTDIR}/tft_gfx.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ts_lcd.o.d ${OBJECTDIR}/glcdfont.o.d ${OBJECTDIR}/ts_lcd_lab06.o.d ${OBJECTDIR}/adc_intf.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
 
 # Source Files
-SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c tft_master.c ic1.c main.c oc2.c
+SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c ts_lcd.c glcdfont.c ts_lcd_lab06.c adc_intf.c
 
 
 
@@ -137,12 +137,6 @@ ${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/acd1
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/c3b5bbd4d27b015b942d4bacf914277e9c573d3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tft_master.o.d 
-	@${RM} ${OBJECTDIR}/tft_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/4c9f9222884140cfa854db48fcf65e60edca879f .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ic1.o.d 
@@ -160,6 +154,42 @@ ${OBJECTDIR}/oc2.o: oc2.c  .generated_files/flags/default/1c84ebf81fd4bfd793de02
 	@${RM} ${OBJECTDIR}/oc2.o.d 
 	@${RM} ${OBJECTDIR}/oc2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/oc2.o.d" -o ${OBJECTDIR}/oc2.o oc2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/a5fa7c1e8fad2300dc5318d5f922f2059cac59da .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
+	@${RM} ${OBJECTDIR}/tft_gfx.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/c3b5bbd4d27b015b942d4bacf914277e9c573d3 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_master.o.d 
+	@${RM} ${OBJECTDIR}/tft_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/a188a43f0c87b7b14b5fe782d198c43f44aef39 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
+	@${RM} ${OBJECTDIR}/ts_lcd.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/97b10bb1c7b52d3c62a799d42eb5a82fb8792b37 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/glcdfont.o.d 
+	@${RM} ${OBJECTDIR}/glcdfont.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ts_lcd_lab06.o: ts_lcd_lab06.c  .generated_files/flags/default/b9f5923d8918cebbaf5e9e598badee233be3be36 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ts_lcd_lab06.o.d 
+	@${RM} ${OBJECTDIR}/ts_lcd_lab06.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd_lab06.o.d" -o ${OBJECTDIR}/ts_lcd_lab06.o ts_lcd_lab06.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/fc93f774f3c19ce637b8cf175b0f520edb93a168 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/adc_intf.o.d 
+	@${RM} ${OBJECTDIR}/adc_intf.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 else
 ${OBJECTDIR}/_ext/1472/uart1.o: ../uart1.c  .generated_files/flags/default/86a7b64fc154d1ccebb10cf1d986f98b5e4f0725 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
@@ -192,12 +222,6 @@ ${OBJECTDIR}/userCommands.o: userCommands.c  .generated_files/flags/default/be50
 	@${RM} ${OBJECTDIR}/userCommands.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/userCommands.o.d" -o ${OBJECTDIR}/userCommands.o userCommands.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/cc6cdab6981c3a3e3c21ca406c3d0f7963745947 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tft_master.o.d 
-	@${RM} ${OBJECTDIR}/tft_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/ic1.o: ic1.c  .generated_files/flags/default/c3b8844bc39fdd3aab4806b8650739f32822aa46 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ic1.o.d 
@@ -215,6 +239,42 @@ ${OBJECTDIR}/oc2.o: oc2.c  .generated_files/flags/default/21e260bfafccd1a5dc7e2d
 	@${RM} ${OBJECTDIR}/oc2.o.d 
 	@${RM} ${OBJECTDIR}/oc2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/oc2.o.d" -o ${OBJECTDIR}/oc2.o oc2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/tft_gfx.o: tft_gfx.c  .generated_files/flags/default/bea51466d8ead665f0368ca7ebed9c27b9f1c44d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_gfx.o.d 
+	@${RM} ${OBJECTDIR}/tft_gfx.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_gfx.o.d" -o ${OBJECTDIR}/tft_gfx.o tft_gfx.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/cc6cdab6981c3a3e3c21ca406c3d0f7963745947 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tft_master.o.d 
+	@${RM} ${OBJECTDIR}/tft_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/b4bf57ec57a3658880f2809070fafebe8f9b74d0 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
+	@${RM} ${OBJECTDIR}/ts_lcd.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/8223aeb85b67abc7a161a4c66064f44065881842 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/glcdfont.o.d 
+	@${RM} ${OBJECTDIR}/glcdfont.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/glcdfont.o.d" -o ${OBJECTDIR}/glcdfont.o glcdfont.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/ts_lcd_lab06.o: ts_lcd_lab06.c  .generated_files/flags/default/87aab8c8d1dbd731a2338351c44056a974a9f62d .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ts_lcd_lab06.o.d 
+	@${RM} ${OBJECTDIR}/ts_lcd_lab06.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd_lab06.o.d" -o ${OBJECTDIR}/ts_lcd_lab06.o ts_lcd_lab06.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
+	
+${OBJECTDIR}/adc_intf.o: adc_intf.c  .generated_files/flags/default/a6c18f1e6402c46c498cf4718d13b194ea0e8e7a .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/adc_intf.o.d 
+	@${RM} ${OBJECTDIR}/adc_intf.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc_intf.o.d" -o ${OBJECTDIR}/adc_intf.o adc_intf.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 endif
 

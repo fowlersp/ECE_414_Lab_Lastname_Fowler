@@ -15,8 +15,8 @@
         OpenOC1(OC_ON | OC_TIMER_MODE16| OC_TIMER2_SRC | OC_PWM_FAULT_PIN_DISABLE, 
                 duty, duty);  
         // only OC1RS (2rd arg) matters in this example
-        PPSOutput(1, RPB4, OC1); // board with touch screen
-        //PPSOutput(1, RPB7, OC1);  // map to RPB7 (pin 16)
+        //PPSOutput(1, RPB4, OC1); // board with touch screen
+        PPSOutput(1, RPB7, OC1);  // map to RPB7 (pin 16)
     }    
     
     void oc1_setduty_plib(uint16_t duty) {

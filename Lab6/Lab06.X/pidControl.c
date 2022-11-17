@@ -14,12 +14,11 @@ void setDerivativeGain(uint16_t sdg){
     dg = sdg;
 }
 
+    
 void TickPidControl(uint16_t rpm){
     static uint16_t actualRPMPrev;
-    float actuator_f;
-    static int16_t integ;
-    int16_t error;
-    int16_t deriv;
+    
+    
     switch(PID_STATES){
         case PID_INIT:
             actuator = 0;
