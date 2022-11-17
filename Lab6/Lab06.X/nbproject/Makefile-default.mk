@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c ts_lcd.c glcdfont.c ts_lcd_lab06.c adc_intf.c
+SOURCEFILES_QUOTED_IF_SPACED=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c glcdfont.c ts_lcd_lab06.c adc_intf.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/ic1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/oc2.o.d ${OBJECTDIR}/tft_gfx.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/ts_lcd.o.d ${OBJECTDIR}/glcdfont.o.d ${OBJECTDIR}/ts_lcd_lab06.o.d ${OBJECTDIR}/adc_intf.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/uart1.o.d ${OBJECTDIR}/_ext/1472/ztimer4.o.d ${OBJECTDIR}/_ext/1472/oc1_plib.o.d ${OBJECTDIR}/pidControl.o.d ${OBJECTDIR}/userCommands.o.d ${OBJECTDIR}/ic1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/oc2.o.d ${OBJECTDIR}/tft_gfx.o.d ${OBJECTDIR}/tft_master.o.d ${OBJECTDIR}/glcdfont.o.d ${OBJECTDIR}/ts_lcd_lab06.o.d ${OBJECTDIR}/adc_intf.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/ts_lcd.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/uart1.o ${OBJECTDIR}/_ext/1472/ztimer4.o ${OBJECTDIR}/_ext/1472/oc1_plib.o ${OBJECTDIR}/pidControl.o ${OBJECTDIR}/userCommands.o ${OBJECTDIR}/ic1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/oc2.o ${OBJECTDIR}/tft_gfx.o ${OBJECTDIR}/tft_master.o ${OBJECTDIR}/glcdfont.o ${OBJECTDIR}/ts_lcd_lab06.o ${OBJECTDIR}/adc_intf.o
 
 # Source Files
-SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c ts_lcd.c glcdfont.c ts_lcd_lab06.c adc_intf.c
+SOURCEFILES=../uart1.c ../ztimer4.c ../oc1_plib.c pidControl.c userCommands.c ic1.c main.c oc2.c tft_gfx.c tft_master.c glcdfont.c ts_lcd_lab06.c adc_intf.c
 
 
 
@@ -167,12 +167,6 @@ ${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/c3b5bbd4
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
-${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/a188a43f0c87b7b14b5fe782d198c43f44aef39 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
-	@${RM} ${OBJECTDIR}/ts_lcd.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
 ${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/97b10bb1c7b52d3c62a799d42eb5a82fb8792b37 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/glcdfont.o.d 
@@ -251,12 +245,6 @@ ${OBJECTDIR}/tft_master.o: tft_master.c  .generated_files/flags/default/cc6cdab6
 	@${RM} ${OBJECTDIR}/tft_master.o.d 
 	@${RM} ${OBJECTDIR}/tft_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/tft_master.o.d" -o ${OBJECTDIR}/tft_master.o tft_master.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
-	
-${OBJECTDIR}/ts_lcd.o: ts_lcd.c  .generated_files/flags/default/b4bf57ec57a3658880f2809070fafebe8f9b74d0 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ts_lcd.o.d 
-	@${RM} ${OBJECTDIR}/ts_lcd.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ts_lcd.o.d" -o ${OBJECTDIR}/ts_lcd.o ts_lcd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -D _SUPPRESS_PLIB_WARNING   
 	
 ${OBJECTDIR}/glcdfont.o: glcdfont.c  .generated_files/flags/default/8223aeb85b67abc7a161a4c66064f44065881842 .generated_files/flags/default/fa77e48c5d6b209b0dbc904325b3870195f7a677
 	@${MKDIR} "${OBJECTDIR}" 

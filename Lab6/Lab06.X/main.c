@@ -21,17 +21,21 @@
 #define RX_BUFFER 100
 
 void main(){
-    ts_lcd_init();
+    ts_lcd_lab06_init();
     setProportionalGain(120);
     setIntegralGain(60);
     setDerivativeGain(30);
     oc1_init_plib(0);
-    oc2_init_plib(5000);
+    //oc2_init_plib(5000);
     ic1_init();
     uart1_init(115200);
     zTimerSet(100);
     zTimerOn();
     INTEnableSystemMultiVectoredInt();
+    
+    SYSTEMConfigPerformance(PBCLK);
+    configureADC();
+    
     char buffer[RX_BUFFER];
     char buffer2[RX_BUFFER];
     char bufferPrev[RX_BUFFER];
@@ -55,12 +59,12 @@ void main(){
             TickPidControl(aaa);//not working, not increasing actuator when increased load/lowered rpm read
 //            int go = 3*actuator;
 //            if (go>65534){go=65535;}
-            oc2_setduty_plib((int)actualRPM*65535);
+            //oc2_setduty_plib((int)actualRPM*65535);
             oc1_setduty_plib(actuator);
             
             //touchscreen code
-            ts_write(bufferDesired, bufferDesiredPrev);
-            ts_write(bufferCurrent, bufferCurrentPrev);
+            //ts_write(bufferDesired, bufferDesiredPrev);
+            //ts_write(bufferCurrent, bufferCurrentPrev);
             strcpy(bufferDesiredPrev, bufferDesired);
             strcpy(bufferCurrentPrev, bufferCurrent);
             
@@ -71,7 +75,7 @@ void main(){
             if(tmp == '\r'){
                 //printf("\r\n desiredRPM: %d\r\n", desiredRPM);
                 parseUserCommands(buffer2);
-                ts_write(buffer2, bufferPrev);
+                //ts_write(buffer2, bufferPrev);
                 while(x < lastcPrev){
                     bufferPrev[x] = '\0';
                     x++;

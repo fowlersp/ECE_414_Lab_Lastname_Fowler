@@ -3,16 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/oc2.h</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/main.c</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/userCommands.c</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/oc2.c</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/ztimer4.h</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/ts_lcd_lab06.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/ts_lcd_lab06.h</file>
             <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/oc1_plib.c</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/ic1.c</file>
-            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/pidControl.c</file>
             <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/uart1.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab5/Lab05.X/adc_intf.h</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/userCommands.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/main.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab5/Lab05.X/main.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab5/Lab05.X/adc_intf.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/ic1.c</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab5/Lab05.X/porta_in.h</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/nbproject/Makefile-default.mk</file>
             <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab6/Lab06.X/pidControl.h</file>
+            <file>file:/C:/Users/fowlersp/Documents/ECE_414_Lab_Wu_Fowler/Lab5/Lab05.X/calculator_fsm.h</file>
         </group>
     </open-files>
 </project-private>

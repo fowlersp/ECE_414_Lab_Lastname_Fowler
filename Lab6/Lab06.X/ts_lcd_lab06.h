@@ -12,7 +12,6 @@
 extern "C" {
 #endif
     
-#include "ts_lcd.h"
 #include <inttypes.h>
 #include "glcdfont.c"
 #include "tft_master.h"
